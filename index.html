@@ -13,11 +13,25 @@
             <h1>Data-Over-Sound</h1>
             <p>A prototype inspired by <a href="https://github.com/ggerganov/wave-share" target="_blank">wave-share</a> by ggerganov.</p>
         </header>
+
+        <div id="mode-selector">
+            <button id="sender-btn" class="mode-btn active">Sender</button>
+            <button id="receiver-btn" class="mode-btn">Receiver</button>
+        </div>
+
         <main>
-            <div id="transmitter">
+            <div id="sender-view">
                 <textarea id="message-input" placeholder="Type a short message..." maxlength="50"></textarea>
                 <button id="transmit-btn">Transmit</button>
             </div>
+
+            <div id="receiver-view" class="hidden">
+                 <div id="received-message-container">
+                    <pre id="received-message" placeholder="Waiting for a message..."></pre>
+                </div>
+                <button id="clear-btn">Clear</button>
+            </div>
+
             <div id="visualizer-container">
                 <canvas id="visualizer"></canvas>
             </div>
@@ -33,4 +47,3 @@
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
